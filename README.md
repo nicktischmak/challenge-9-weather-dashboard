@@ -10,9 +10,6 @@
   
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
-  - [contributing](#contributing)
-  - [Tests](#tests)
   - [Questions](#questions)
   
   ## Installation
@@ -22,16 +19,6 @@
   ## Usage
   
   search for a place and the site will find the weather for that place
-  
-  
-  
-  ## Contributing
-  
-  N/A
-  
-  ## Tests
-  
-  N/A
   
   ## Questions
   

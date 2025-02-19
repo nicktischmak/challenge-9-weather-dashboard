@@ -1,5 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // TODO: Define a City class with name and id properties
 class City {
@@ -37,12 +41,12 @@ class HistoryService {
   // TODO Define an addCity method that adds a city to the searchHistory.json file
   public async addCity(cityName: string): Promise<void> {
     const cities = await this.read();
-    const newCity = new City(Date.now().toString(), cityName);
+    const newCity = new City(Date.now(), cityName);
     cities.push(newCity);
     await this.write(cities);
   }
   // * BONUS TODO: Define a removeCity method that removes a city from the searchHistory.json file
-  public async removeCity(id: string): Promise<void> {
+  public async removeCity(id: number): Promise<void> {
     const cities = await this.read();
     const updatedCities = cities.filter(city => city.id !== id);
     await this.write(updatedCities);
